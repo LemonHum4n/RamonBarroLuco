@@ -9,6 +9,7 @@ describe('AppComponent', () => {
       providers: [provideRouter([])]
     }).compileComponents();
     
+
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
