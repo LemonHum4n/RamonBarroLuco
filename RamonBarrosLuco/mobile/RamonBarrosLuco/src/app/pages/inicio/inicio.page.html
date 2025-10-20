@@ -1,0 +1,70 @@
+<ion-content [fullscreen]="true">
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Titulo Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      
+      <ion-list>
+        <ion-item (click)="add()">
+          <!-- <ion-icon aria-hidden="true" name="airplane" slot="start"></ion-icon> -->
+          <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+          <ion-label>Agregar vehiculo</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="people-outline"></ion-icon>
+          <ion-label>Sobre nosotros</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          <ion-label>Inicio</ion-label>
+        </ion-item>
+
+      </ion-list>
+
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> 
+
+      <h1>Vehiculos</h1>
+
+        <ion-grid>
+          <ion-row>
+            @for(a of autos; track a.patente){
+            <ion-col>
+              <ion-card>
+                <img alt="Silhouette of mountains" [src]="a.imagen"/>
+                <ion-card-header>
+                  <ion-card-title>{{a.marca}}</ion-card-title>
+                  <ion-card-subtitle>{{a.modelo}}</ion-card-subtitle>
+                </ion-card-header>
+              
+                <ion-card-content>
+                  <!-- Here's a small text description for the card content. Nothing more, nothing less. -->
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          }
+
+
+          </ion-row>
+        </ion-grid>
+
+      
+
+    </ion-content>
+  </div>
+
+</ion-content>

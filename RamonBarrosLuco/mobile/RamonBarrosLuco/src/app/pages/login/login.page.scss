@@ -1,0 +1,36 @@
+.contenedor{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    //border: solid green;
+    justify-content: center;
+}
+
+.boxImg{
+    width: 100%;
+    //border: solid red;
+    display: flex;
+    justify-content: center;
+}
+
+ion-img{
+    width: 60%;
+}
+
+.boxInput{
+    //border:solid yellow;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.boxButton{
+    //border:solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+}

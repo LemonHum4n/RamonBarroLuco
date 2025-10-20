@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <div class="contenedor">
+    <div class="boxImg">
+      <ion-img src="https://docs-demo.ionic.io/assets/madison.jpg"
+        alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>
+    </div>
+
+    <div class="boxInput">
+      <ion-input [(ngModel)]="correo" label="Correo" label-placement="floating" fill="outline" placeholder="Correo"></ion-input>
+    </div>
+
+    <div class="boxInput">
+      <ion-input type="password" [(ngModel)]="contrasena" label="Contraseña" value="">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+    </div>
+
+    <div class="boxButton">
+      <ion-button expand="full"(click)="login()">Acceder</ion-button>
+      <ion-button expand="full">Registrar</ion-button>
+    </div>
+
+  </div>
+
+</ion-content>
